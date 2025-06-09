@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Virtual Couch</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script> const ROOM_ID = "<%= roomId %>" </script>
+    <script src="https://unpkg.com/peerjs@1.5.2/dist/peerjs.min.js" defer></script>
+    <script src="/socket.io/socket.io.js" defer></script>
+    <!-- Add YouTube API for Cinema Mode -->
+    <script src="https://www.youtube.com/iframe_api" defer></script>
+    <script src="/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Kindred</h1>
+        <p>Abir built this just for you, Simi ❤️</p>
+    </header>
+
+    <div id="video-grid">
+        <!-- Videos go here -->
+    </div>
+    
+    <!-- ADDING BACK THE CHAT PANEL -->
+    <div id="chat-panel">
+        <div class="chat-header">
+            <h3>Chat</h3>
+            <button id="close-chat-btn" class="close-btn">×</button>
+        </div>
+        <ul id="chat-messages"></ul>
+        <form id="chat-form">
+            <input id="chat-input" type="text" placeholder="Say something..." autocomplete="off">
+            <button type="submit" class="send-btn"><i class="fas fa-paper-plane"></i></button>
+        </form>
+    </div>
+
+    <div id="controls-bar">
+        <button id="toggle-mute" class="control-btn"><i class="fas fa-microphone"></i></button>
+        <button id="toggle-video" class="control-btn"><i class="fas fa-video"></i></button>
+        <!-- ADDING BACK THE MISSING BUTTONS -->
+        <button id="share-screen-btn" class="control-btn"><i class="fas fa-desktop"></i></button>
+        <button id="cinema-btn" class="control-btn"><i class="fas fa-film"></i></button>
+        <button id="chat-btn" class="control-btn"><i class="fas fa-comment-dots"></i></button>
+        <button id="end-call-btn" class="control-btn end-call"><i class="fas fa-phone-slash"></i></button>
+    </div>
+
+</body>
+</html>
